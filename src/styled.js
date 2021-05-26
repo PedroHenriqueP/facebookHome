@@ -13,6 +13,7 @@ export const Limit = styled.div`
 
 export const More = styled.div`
     width: 33,33%;
+    height: 100vh;
     overflow-y: scroll; 
     margin-top: 10px;
     >div{
@@ -42,7 +43,9 @@ export const Profile = styled.img`
 
 export const Body = styled.div`
     width: 33,33%;
+    height: 100vh;
     margin-top: 10px;
+    overflow: auto;
 `;
 
 export const NewPost = styled.div`
@@ -93,6 +96,7 @@ export const Profile2 = styled.img`
     height: 40px;
     border-radius: 50%;
     padding: 10px 0;
+    cursor: pointer;
 `;
 
 export const Line = styled.div`
@@ -107,6 +111,76 @@ export const IconPost = styled.img`
     height: 25px;
     margin-left: 20px;
     padding: 10px 5px 10px 0;
+`;
+
+export const Post = styled.div`
+    width: 500px;
+    background-color: #FFF;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 .1em #898989;
+`;
+
+export const BodyLimit = styled.div`
+    padding: 10px 0;
+`;
+
+export const PostHead = styled.div`
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    >.infoPost{
+        display: flex;
+        flex-direction: column;
+        margin-left: 5px;
+        >.namePost{
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        >.hourPost{
+            font-weight: 400;
+            color: #7da9e3;
+            font-size: 13px;
+        }
+    }
+`;
+
+export const PostComment = styled.div`
+    position: relative;
+    width: 90%;
+    margin: 10px auto;
+`;
+
+export const PostImg = styled.img`
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+`;
+
+export const PostOption = styled.div`
+    position: relative;
+    width: 90%;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-around;
+    >a{
+        cursor: pointer;
+        position: relative;
+        width: 33%;
+        padding: 10px 0;
+        align-items: center;
+        text-align: center;
+        border-radius: 4px;
+        &:hover{
+            background-color: #f0f2f5;
+        }
+    }
+`;
+
+export const PostFooter = styled.div`
+
 `;
 
 export const Contacts = styled.div`

@@ -1,15 +1,33 @@
-import { Section, Limit, More, Profile, Body, Contacts, NewPost, Profile2, Line, IconPost } from "./styled";
+import {
+  Section,
+  Limit,
+  More,
+  Profile,
+  Body,
+  Contacts,
+  NewPost,
+  Profile2,
+  Line,
+  IconPost,
+  Post,
+  BodyLimit,
+  PostHead,
+  PostComment,
+  PostImg,
+  PostOption,
+  PostFooter
+} from "./styled";
 
 import Pedro from "./assets/pedro.jpeg";
-import Camera from './assets/camera.png';
-import Photo from './assets/foto.png';
+import Camera from "./assets/camera.png";
+import Photo from "./assets/foto.png";
+import ReactImg from "./assets/react.png";
+import Js from "./assets/js.png";
 
 function App() {
   return (
     <Section>
       <Limit>
-
-
         <More>
           <div>
             <Profile src={Pedro} />
@@ -53,27 +71,50 @@ function App() {
           </div>
         </More>
 
-
         <Body>
           <NewPost>
-            <div className='new'>
-              <Profile2 src={Pedro}/>
-              <input placeholder='Em que estás pensando, Pedro?'></input>
+            <div className="new">
+              <Profile2 src={Pedro} />
+              <input placeholder="Em que estás pensando, Pedro?"></input>
             </div>
-            <Line/>
-            <div className='media'>
-              <div className='video'>
-                <IconPost src={Camera}/>
+            <Line />
+            <div className="media">
+              <div className="video">
+                <IconPost src={Camera} />
                 <a>Vídeo em direto</a>
               </div>
-              <div className='video'>
-                <IconPost src={Photo}/>
+              <div className="video">
+                <IconPost src={Photo} />
                 <a>Foto/vídeo</a>
               </div>
             </div>
           </NewPost>
+          <Post>
+            <BodyLimit>
+              <PostHead>
+                <Profile2 src = {ReactImg}/>
+                <div className='infoPost'>
+                  <a className='namePost'>React JS</a>
+                  <a className='hourPost'>1 h.</a>
+                </div>
+              </PostHead>
+              <PostComment>
+                O que é JavaScript? JavaScript é uma linguagem de programação client-side. 
+                Ela é utilizada para controlar o HTML e o CSS para manipular comportamentos 
+                na página.
+              </PostComment>
+              <PostImg src ={Js}/>
+              <Line/>
+              <PostOption>
+                <a>Curtir</a>
+                <a>Comentar</a>
+                <a>Compartilhar</a>
+              </PostOption>
+              <Line/>
+            </BodyLimit>
+          </Post>
         </Body>
-        <Contacts>oi</Contacts>
+        <Contacts>Contatos</Contacts>
       </Limit>
     </Section>
   );
