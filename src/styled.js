@@ -6,15 +6,15 @@ export const Section = styled.section`
 `;
 
 export const Limit = styled.div`
+    padding-top: 60px;
     max-width: 1300px;
     display: flex;
     justify-content: space-between;
 `;
 
 export const More = styled.div`
-    width: 33,33%;
+    width: 25%;
     height: 100vh;
-    overflow-y: scroll; 
     margin-top: 10px;
     >div{
         cursor: pointer;
@@ -42,10 +42,16 @@ export const Profile = styled.img`
 `;
 
 export const Body = styled.div`
-    width: 33,33%;
+    width: 55%;
     height: 100vh;
     margin-top: 10px;
     overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 `;
 
 export const NewPost = styled.div`
@@ -184,6 +190,47 @@ export const PostFooter = styled.div`
 `;
 
 export const Contacts = styled.div`
-    width: 33,33%;
-    overflow-y: scroll; 
+    width: 20%;
+    height: 100vh;
+    overflow: auto; 
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #dad7d7;
+    }
+    >h2{
+        font-weight: 600;
+        color: #65676b;
+        font-size: 20px;
+    }
+`;
+
+export const Frinds = styled.div`
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+`;
+
+export const Frind = styled.div`
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    margin: 0 10px;
+    align-items: center;
+    border-radius: 10px;
+    &:hover{
+        background-color: #e3e3e3;
+    }
+    >a{
+        margin: 0 10px;
+        font-family: inherit;
+        color: #050505;
+        font-size: 13px;
+    }
 `;

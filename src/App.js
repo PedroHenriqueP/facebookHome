@@ -15,18 +15,24 @@ import {
   PostComment,
   PostImg,
   PostOption,
-  PostFooter
+  PostFooter,
+  Frinds,
+  Frind
 } from "./styled";
 
 import Pedro from "./assets/pedro.jpeg";
+import None from './assets/none.png';
 import Camera from "./assets/camera.png";
 import Photo from "./assets/foto.png";
 import ReactImg from "./assets/react.png";
 import Js from "./assets/js.png";
 
+import Navbar from './navbar/navbar';
+
 function App() {
   return (
     <Section>
+      <Navbar/>
       <Limit>
         <More>
           <div>
@@ -92,6 +98,29 @@ function App() {
           <Post>
             <BodyLimit>
               <PostHead>
+                <Profile2 src = {Pedro}/>
+                <div className='infoPost'>
+                  <a className='namePost'>Pedro Henrique</a>
+                  <a className='hourPost'>1 h.</a>
+                </div>
+              </PostHead>
+              <PostComment>
+                Olá, Eu sou Pedro, um desenvolvedor Jr. React JS e Node Js apaixonado e muito curiso
+                por essa área.
+              </PostComment>
+              <PostImg src ={Pedro}/>
+              <Line/>
+              <PostOption>
+                <a>Curtir</a>
+                <a>Comentar</a>
+                <a>Compartilhar</a>
+              </PostOption>
+              <Line/>
+            </BodyLimit>
+          </Post>
+          <Post>
+            <BodyLimit>
+              <PostHead>
                 <Profile2 src = {ReactImg}/>
                 <div className='infoPost'>
                   <a className='namePost'>React JS</a>
@@ -114,7 +143,84 @@ function App() {
             </BodyLimit>
           </Post>
         </Body>
-        <Contacts>Contatos</Contacts>
+
+        <Contacts>
+          <h2>Contatos</h2>
+          <Frinds>
+            <Frind>
+              <Profile src={ReactImg} />
+              <a>React</a>
+            </Frind>
+            <Frind>
+              <Profile src={Js} />
+              <a>Java Script</a>
+            </Frind>
+            <Frind>
+              <Profile src={None} />
+              <a>Carlos José Pontes</a>
+            </Frind>
+            <Frind>
+              <Profile src={None} />
+              <a>Adriana Rabêlo</a>
+            </Frind>
+            <Frind>
+              <Profile src={None} />
+              <a>Matteus Pontes</a>
+            </Frind>
+            <Frind>
+              <Profile src={None} />
+              <a>Carla Rabêlo</a>
+            </Frind>
+            <Frind>
+              <Profile src={None} />
+              <a>Clara Rabêlo</a>
+            </Frind>
+            <Frind>
+              <Profile src={None} />
+              <a>Milena</a>
+            </Frind>
+            <Frind>
+              <Profile src={None} />
+              <a>Neto Dias</a>
+            </Frind>
+            <Frind>
+              <Profile src={None} />
+              <a>Valéria Santos</a>
+            </Frind>
+            <Frind>
+              <Profile src={None} />
+              <a>Pedro Paulo</a>
+            </Frind>
+            <Frind>
+              <Profile src={None} />
+              <a>George Dias</a>
+            </Frind>
+            <Frind>
+              <Profile src={None} />
+              <a>Gilvandos Dias</a>
+            </Frind>
+            <Frind>
+              <Profile src={None} />
+              <a>Marcos Antônio</a>
+            </Frind>
+            <Frind>
+              <Profile src={None} />
+              <a>Anne Beatriz</a>
+            </Frind>
+            <Frind>
+              <Profile src={None} />
+              <a>Isabel Dias</a>
+            </Frind>
+            <Frind>
+              <Profile src={None} />
+              <a>Erik Lisboa</a>
+            </Frind>
+            <Frind>
+              <Profile src={None} />
+              <a>Evandro Santos</a>
+            </Frind>
+          </Frinds>
+        </Contacts>
       </Limit>
     </Section>
   );
