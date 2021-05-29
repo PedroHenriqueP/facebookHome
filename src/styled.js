@@ -7,9 +7,10 @@ export const Section = styled.section`
 
 export const Limit = styled.div`
     padding-top: 60px;
-    max-width: 1300px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    margin: auto;
 `;
 
 export const More = styled.div`
